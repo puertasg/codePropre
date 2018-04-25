@@ -11,7 +11,7 @@ public class Entreprise {
 	
 	private static final int CAPITAL_MAX = 3000000;
 	
-	public void Afficher_statut(){
+	public void afficherStatut(){
 		
 	}
 
