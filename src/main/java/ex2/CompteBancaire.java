@@ -3,10 +3,10 @@ package ex2;
 /** Représente un compte bancaire de type compte courante (type=CC) ou livret A (type=LA)
  * @author DIGINAMIC
  */
-public class CompteBancaire {
+public abstract class CompteBancaire {
 
 	/** solde : solde du compte */
-	private double solde;
+	protected double solde;
 	
 	/** decouvert : un découvert est autorisé seulement pour les comptes courants */
 	private double decouvert;
@@ -39,18 +39,7 @@ public class CompteBancaire {
 	/** Ajoute un montant au solde
 	 * @param montant
 	 */
-	public void debiterMontant(double montant){
-		if (type.equals("CC")){
-			if (this.solde - montant > decouvert){
-				this.solde = solde - montant;
-			}	
-		}
-		else if (type.equals("LA")){
-			if (this.solde - montant > 0){
-				this.solde = solde - montant;
-			}	
-		}
-	}
+	public abstract void debiterMontant(double montant);
 	
 	public void appliquerRemuAnnuelle(){
 		if (type.equals("LA")){
