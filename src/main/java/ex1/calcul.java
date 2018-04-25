@@ -2,11 +2,11 @@ package ex1;
 
 public class calcul {
 
-	public int get1(int a, int b){
+	public int addition(int a, int b){
 		return a+b;
 	}
 	
-	public int get2(int a, int b){
+	public int soustraction(int a, int b){
 		return a-b;
 	}
 }
