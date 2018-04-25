@@ -4,13 +4,8 @@ public class CompteCourant extends CompteBancaire {
 	
 	private double decouvert;
 	
-	public CompteCourant(String type, double solde, double tauxRemuneration) {
-		super("CC", solde, 0, tauxRemuneration);
-		this.decouvert = 0;
-	}
-	
-	public CompteCourant(String type, double solde, double tauxRemuneration, double decouvert) {
-		super("CC", solde, 0, tauxRemuneration);
+	public CompteCourant(String type, double solde, double decouvert) {
+		super("CC", solde);
 		this.decouvert = decouvert;
 	}
 	
@@ -20,5 +15,17 @@ public class CompteCourant extends CompteBancaire {
 			this.solde = solde - montant;
 		}
 	}
-
+	
+	/** Getter for decouvert
+	 * @return the decouvert
+	 */
+	public double getDecouvert() {
+		return decouvert;
+	}
+	/** Setter
+	 * @param decouvert the decouvert to set
+	 */
+	public void setDecouvert(double decouvert) {
+		this.decouvert = decouvert;
+	}
 }
